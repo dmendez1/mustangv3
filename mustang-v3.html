@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<!--
+	Author: David Mendez
+	Class: Web and Distributed Programming
+	Project: Sprint 7 - Mustang V3
+-->
+	<head>
+		<title>Mustang V3 &mdash; David Mendez</title>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+		<script src="mustang-v3.js"></script>
+		<link rel="stylesheet" href="mustang-v3.css">
+    </head>
+	<body onload="initApplication()">
+		<h1>Mustang V3 &mdash; David Mendez</h1>
+        <br><hr>
+		<button class="button" onclick="loadIndex()">Load Index</button><br>
+		<p>Index:
+			<table id="indexTable">
+			</table>
+		</p>
+		<br>
+
+		<button class="button" onclick="loadContacts()">Load Contacts</button><br>
+		<p>Contacts:
+			<table id="contactTable">
+			</table>
+		</p>
+		<br>
+
+        <button class="button" onclick="logContacts()">Log Contacts to Console</button><br>
+		<div id="snackbar"></div>
+
+        <br><br><hr>
+
+        <form autocomplete="off">
+            <div class="autocomplete">
+                <input id="contactList" type="text" name="myContacts" placeholder="Search contacts..." >
+            </div>
+        </form>
+
+
+		<table>
+            <tr>
+                <td><button class="button button-in-table" id="previousbtn" type="button" onclick="previous()">Previous</button></td>
+                <td><button class="button button-in-table" id="nextbtn" type="button" autofocus onclick="next()">Next</button></td>
+            <tr>
+                <td><button class="button button-add button-in-table" type="button" onclick="add()">Add</button></td>
+                <td><button class="button button-delete button-in-table" id="deletebtn" type="button" onclick="remove()">Delete</button></td>
+            </tr>
+            <tr>
+                <td><button class="button button-update button-in-table" id="updatebtn" type="button" onclick="update()">Update</button></td>
+                <td><button class="button button-clear button-in-table" id="clearbtn" type="button" onclick="clearInput()">Clear</button></td>
+            </tr>
+             <tr>
+                <td>First Name:</td>
+                <td><input id="firstNameID" type="text" value="" size="30"></td>
+            </tr>
+             <tr>
+                <td>Last Name:</td>
+                <td><input id="lastNameID" type="text" value="" size="30"></td>
+            </tr>
+            <tr>
+                <td>Preferred Name:</td>
+                <td><input id="preferredNameID" type="text" value="" size="30"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input id="emailID" type="text" value="" size="30"></td>
+            </tr>
+             <tr>
+                <td>Phone Number:</td>
+                <td><input id="phoneNumberID" type="text" value="" size="30"></td>
+            </tr>
+            <tr>
+                <td>Zip:</td>
+                <td><input id="zipID" type="text" value="" size="30" onblur="zipBlurFunction()"></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input id="cityID" type="text" value="" size="30" ></td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td><input id="stateID" type="text" value="" size="30"></td>
+            </tr>
+            <tr>
+                <td>Latitude:</td>
+                <td><input id="latID" type="text" value="" size="30"></td>
+            </tr>
+            <tr>
+                <td>Longitude:</td>
+                <td><input id="lngID" type="text" value="" size="30"></td>
+            </tr>
+            <tr>
+                <td>Favorite Hobby:</td>
+                <td><input id="favoriteHobbyID" type="text" value="" size="30"></td>
+            </tr>
+        </table>
+
+        <p id="statusID"></p>
+        <br>
+        
+        <button class="button" onclick="clearServer()">Clear Contacts From Server</button>
+
+	</body>
+</html>

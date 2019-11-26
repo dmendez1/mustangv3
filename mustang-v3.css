@@ -1,0 +1,205 @@
+/*
+	Author: David Mendez
+	Class: Web and Distributed Programming
+	Project: Sprint 7 - Mustang V3
+*/
+
+html, body {
+	padding-left: 10px;
+	padding-top: 5px;
+	font-family: verdana;
+	box-sizing: border-box;
+	background-color: azure;
+}
+
+.button {
+	background-color: #696969;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 6px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	outline: none;
+}
+.button-delete {
+	background-color: cyan;
+}
+.button-clear {
+	background-color: green;
+}
+.button-add {
+	background-color: cyan;
+}
+.button-update {
+	background-color: green;
+}
+.button-in-table {
+	width: 100% !important;
+	
+}
+.button:hover {
+	background-color: #3f2b2b;
+}
+.button-delete:hover {
+	background-color: maroon;
+}
+.button-clear:hover {
+	background-color: rgb(177, 81, 177);
+}
+.button-add:hover {
+	background-color: rgb(184, 82, 45);
+}
+.button-update:hover {
+	background-color: rgb(127, 182, 182);
+}
+.button:active {
+	transform: translateY(4px);
+}
+.button:disabled {
+	background-color: #696969;
+	cursor: not-allowed;
+}
+
+
+.autocomplete {
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	left: 60%;
+	top: 30px;
+}
+.autocomplete-items {
+	position: absolute;
+	border: 1px solid #d4d4d4;
+	border-bottom: none;
+	border-top: none;
+	z-index: 99;
+	top: 100%;
+	left: 0;
+	right: 0;
+}
+.autocomplete-items div {
+	padding: 10px;
+	cursor: pointer;
+	background-color: #fff;
+	border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+	background-color: #e9e9e9;
+}
+.autocomplete-active {
+	background-color: rgb(112, 218, 165) !important;
+	color: white;
+}
+.autocomplete-box input {
+	border: 1px solid transparent;
+	background-color: #f1f1f1;
+	padding: 10px;
+	font-size: 16px;
+}
+.autocomplete-box input[type=text] {
+	background-color: #f1f1f1;
+	width: 100%;
+}
+
+input[type=text] {
+	border: 2px solid lightgray;
+	border-radius: 4px;
+	padding: 6px;
+	transition: 0.5s;
+	outline: none;
+	width: 175px;
+}
+
+input[type=text]:focus {
+	border: 2px solid black;
+	width: 200px;
+}
+
+
+#indexTable {
+	visibility: hidden;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+}
+#indexTable td, #indexTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#indexTable tr:nth-child(even) {
+	background-color: plum;
+}
+#indexTable tr:hover {
+	background-color: #ddd;
+}
+#indexTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(112, 218, 165);
+    color: white;
+}
+
+
+#contactTable {
+	visibility: hidden;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+}
+#contactTable td, #contactTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#contactTable tr:nth-child(even) {
+	background-color: red;
+}
+#contactTable tr:hover {
+	background-color: #ddd;
+}
+#contactTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(112, 218, 165);
+    color: white;
+}
+
+
+#snackbar {
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+}
+
+#snackbar.show {
+	visibility: visible;
+	animation: fadein 0.5s, fadeout 0.5s 1s;
+}
+/* Adds animation to the snackbar */
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
